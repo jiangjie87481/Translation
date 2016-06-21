@@ -1,15 +1,18 @@
 # 高级Linux
 
 # Linux Installation Instructions for Arch and CentOS
+# Arch和CentOS下的linux安装指南
 
 ## USB Device Configuration
+# USB设备的配置
 
 Linux users need to explicitly allow access to the USB bus for JTAG programming adapters.
+# linux 用户需要支持USB—JTAG仿真器
 
 <aside class="note">
 For Archlinux: replace the group plugdev with uucp in the following commands
 </aside>
-
+# 在linux架构下，有下列命令完成uucp对group plugdev的
 Run a simple ls in sudo mode to ensure the commands below succeed:
 
 <div class="host-code"></div>
