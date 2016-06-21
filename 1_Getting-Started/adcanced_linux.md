@@ -12,7 +12,7 @@ Linux users need to explicitly allow access to the USB bus for JTAG programming 
 <aside class="note">
 For Archlinux: replace the group plugdev with uucp in the following commands
 </aside>
-# 在linux架构下，用下列命令完成uucp对group plugdev的
+# 在linux架构下，用下列命令完成uucp对plugdev组的替代
 Run a simple ls in sudo mode to ensure the commands below succeed:
 #用sudo模式运行ls命令保证其正常执行
 <div class="host-code"></div>
@@ -39,7 +39,7 @@ sudo /etc/init.d/udev restart
 ```
 
 User needs to be added to the group plugdev:
-
+# 将user加入到plugdev组中
 <div class="host-code"></div>
 
 ```sh
@@ -47,7 +47,7 @@ sudo usermod -a -G plugdev $USER
 ```
 
 ## Installation Instructions for Uncommon Linux Systems
-
+# 非标linux系统下的安装指南
 ### CentOs
 
 The build requires Python 2.7.5. Therefore as of this writing Centos 7 should be used. 
