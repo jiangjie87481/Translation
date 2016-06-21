@@ -12,9 +12,9 @@ Linux users need to explicitly allow access to the USB bus for JTAG programming 
 <aside class="note">
 For Archlinux: replace the group plugdev with uucp in the following commands
 </aside>
-# 在linux架构下，有下列命令完成uucp对group plugdev的
+# 在linux架构下，用下列命令完成uucp对group plugdev的
 Run a simple ls in sudo mode to ensure the commands below succeed:
-
+#用sudo模式运行ls命令保证其正常执行
 <div class="host-code"></div>
 
 ```sh
@@ -22,7 +22,7 @@ sudo ls
 ```
 
 Then with sudo rights temporarily granted, run this command:
-
+# 在有sudo权限下运行下列命令：
 <div class="host-code"></div>
 
 ```sh
