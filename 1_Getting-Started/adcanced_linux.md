@@ -49,11 +49,14 @@ sudo usermod -a -G plugdev $USER
 ## Installation Instructions for Uncommon Linux Systems
 # 非标linux系统下的安装指南
 ### CentOs
+# CentOs 版linux操作系统
 
 The build requires Python 2.7.5. Therefore as of this writing Centos 7 should be used. 
 (For earlier Centos releases a side-by-side install of python v2.7.5 may be done. But it is not recommended because it can break yum.) 
+#因为编译需要安装Python2.7.5版本，因此选择Centos7版本（因为早期的Centos发行版中自带安装了phython v2.7.5， 但是不建议这样做，因为可能后期通过yum来安装）
 
 The EPEL repositories are required for openocd libftdi-devel libftdi-python
+# 打开libftdi-devel 和 libftdi-python 需要EPEL库的支持。下面是安装的操作指令
 
 <div class="host-code"></div>
 
@@ -69,10 +72,13 @@ yum install openocd libftdi-devel libftdi-python python-argparse flex bison-deve
 ```
 
 Note:You may want to also install  python-pip and screen
+#注意：你也可能安装python-pip
 
 #### Additional 32 bit libraries
+#一些需要的32位库
 
 Once the arm toolchain is installed test it with:
+# 当arm的开发工具链安装好时，可以按如下办法进行测试
 
 <div class="host-code"></div>
 
@@ -81,6 +87,7 @@ arm-none-eabi-gcc --version
 ```
 
 If you receive the following message 
+#如果你收到了如下信息
 
 <div class="host-code"></div>
 
@@ -89,6 +96,7 @@ bash: gcc-arm-none-eabi-4_7-2014q2/bin/arm-none-eabi-gcc: /lib/ld-linux.so.2: ba
 ```
 
 Then you will also need to install other 32-bit libraries glibc.i686 ncurses-libs.i686
+#那么你将需要另外一个32位的库：glibc.i686 ncurses-lib.i686
 
 <div class="host-code"></div>
 
@@ -100,7 +108,8 @@ sudo yum install glibc.i686 ncurses-libs.i686
 Pulling in ncurses-libs.i686 will pull in most of the other required 32 bit libraries. Centos 7 will install most all the PX4 related devices without the need for any added udev rules. The devices will be accessible to the predefined group ' dialout'. Therefore any references to adding udev rules can be ignored. The only requirement is that your user account is a member of the group 'dial out'
 </aside>
 
-### Arch Linux
+### Arch Linux  
+# Arch 版 linux
 
 <div class="host-code"></div>
 
