@@ -54,7 +54,7 @@ Scanning dependencies of target build_firmware_px4fmu-v2
 make px4fmu-v2_default upload
 ```
 
-A successful run will end with this output:
+成功运行后将会输出:
 
 <div class="host-code"></div>
 
@@ -69,7 +69,7 @@ Rebooting.
 
 ### Raspberry Pi 2 boards
 
-The command below builds the target for Raspbian (posix_pi2_release).
+下面命令将生成为Raspbia(posix_pi2发行版)的目标。
 
 <div class="host-code"></div>
 
@@ -80,12 +80,13 @@ make posix_rpi2_release # for cross-compiler build
 
 The "mainapp" executable file is in the directory build_posix_rpi2_release/src/firmware/posix.
 Copy it over to the RPi (replace YOUR_PI with the IP or hostname of your RPi, [instructions how to access your RPi](../5_Autopilot-Hardware/raspeberry_pi2.md#developer-quick-start))
+'mainapp'可执行文件所在目录为：build_posix_rpi2_release/src/firmware/posix。将其拷到RPi（用IP或你RPi的主机名替换YOU_PI）。 如何得到你的RPi的说明在../5_Autopilot-Hardware/raspeberry_pi2.md#developer-quick-start中
 
 ```sh
 scp build_posix_rpi2_release/src/firmware/posix/mainapp pi@YOUR_PI:/home/pi/
 ```
 
-And run it with :
+接着运行
 <div class="host-code"></div>
 
 ```sh
@@ -93,6 +94,7 @@ And run it with :
 ```
 
 If you're building *directly* on the Pi, you will want the native build target (posix_pi2_default).
+如果你就在pi上进行编译链接，你将得到本机目标（默认的poxix_pi2_default）。
 
 <div class="host-code"></div>
 
@@ -101,16 +103,14 @@ cd Firmware
 make posix_rpi2_default # for native build
 ```
 
-The "mainapp" executable file is in the directory build_posix_rpi2_default/src/firmware/posix.
-Run it directly with :
+mainapp可执行文件所在目录为，按如下命令运行。
 <div class="host-code"></div>
 
 ```sh
 ./build_posix_rpi2_default/src/firmware/posix/mainapp
 ```
 
-A successful build followed by executing mainapp will give you this :
-
+成功编译后再运行mainapp你将得到以下结果：
 ```sh
 [init] shell id: 1996021760
 [init] task name: mainapp
@@ -128,7 +128,7 @@ Ready to fly.
 pxh>
 ```
 
-### QuRT / Snapdragon based boards
+QuRT / Snapdragon 开发板
 
 #### Build it
 
