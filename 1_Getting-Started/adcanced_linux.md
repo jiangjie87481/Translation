@@ -205,7 +205,7 @@ sudo apt-get install libc6:i386 libgcc1:i386 gcc-4.6-base:i386 libstdc++5:i386 l
 ## Ninja Build System
 
 Ninja is fast than Make and the PX4 CMake generators support it. Unfortunately Ubuntu carries only a very outdated version at this point. To install a recent version of [Ninja](https://github.com/martine/ninja), download the binary and add it to your path:
-#Ninja运行起来比Make要快，而且px4的cmake产生器支持它。不幸的是ubuntu所带的版本很老。最近在版本在[Ninja](https://github.com/martine/ninja)中，下载下来然后将其二进制运行文件加入到你的运行路径中即可
+#Ninja运行起来比Make要快，而且px4的cmake产生器支持它。不幸的是ubuntu所带的版本很老。最近在版本在[Ninja]“(https://github.com/martine/ninja)“中，下载下来然后将其二进制运行文件加入到你的运行路径中即可
 
 <div class="host-code"></div>
 
@@ -254,4 +254,4 @@ arm-none-eabi-gcc: No such file or directory
 ```
 
 make sure you have the 32bit libs installed properly as described in the installation steps.
-# 确入你的32位库在前述的说明步骤下已正常安装
+# 确认你的32位库在前述的说明步骤下已正常安装
