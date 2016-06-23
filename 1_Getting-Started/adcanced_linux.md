@@ -107,6 +107,7 @@ sudo yum install glibc.i686 ncurses-libs.i686
 <aside class="note">
 Pulling in ncurses-libs.i686 will pull in most of the other required 32 bit libraries. Centos 7 will install most all the PX4 related devices without the need for any added udev rules. The devices will be accessible to the predefined group ' dialout'. Therefore any references to adding udev rules can be ignored. The only requirement is that your user account is a member of the group 'dial out'
 </aside>
+# 安装ncurses-lib.i686 将会自带的安装其他所需要的32位库。Centos7会安装大部分px4相关的设备而不需要添加任何设备管理规则。设备能够在预告定义好的'dialou'组中查看到。因此任何其他添加设备管理规则的行为都会被忽视。这样做的唯要要求就是你的使用帐户在'dial out'组中。
 
 ### Arch Linux  
 # Arch 版 linux
