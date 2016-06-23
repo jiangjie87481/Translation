@@ -192,7 +192,7 @@ Enter:
 arm-none-eabi-gcc --version
 ```
 
-# 输出应当类似于：
+### 输出应当类似于：
 
 <div class="host-code"></div>
 
@@ -202,7 +202,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
-如果得到的是：
+###如果得到的是：
 
 <div class="host-code"></div>
 
@@ -210,4 +210,4 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 arm-none-eabi-gcc --version
 arm-none-eabi-gcc: No such file or directory
 ```
-# 确认你的32位库在前述的说明步骤下已正常安装
+### 确认你的32位库在前述的说明步骤下已正常安装
