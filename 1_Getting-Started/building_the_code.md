@@ -130,9 +130,10 @@ pxh>
 
 QuRT / Snapdragon 开发板
 
-#### Build it
+编译
 
-The commands below build the targets for the Linux and the DSP side. Both executables communicate via [muORB](../6_Middleware-and-Architecture/uorb_messaging.md).
+下面面命令编译了能在linux与DSP上使用的目标.所有的可执行文件通信通过
+[muORB](../6_Middleware-and-Architecture/uorb_messaging.md).
 
 <div class="host-code"></div>
 
@@ -141,7 +142,7 @@ cd Firmware
 make eagle_default
 ```
 
-To load the SW on the device, connect via USB cable and make sure the device is booted. Run this in a new terminal window:
+为了将SW下载到设备上，通过usb线连上然后确信设备已经boot启动了。在新的终端运行如下命令：
 
 <div class="host-code"></div>
 
@@ -149,7 +150,7 @@ To load the SW on the device, connect via USB cable and make sure the device is 
 adb shell
 ```
 
-Go back to previous terminal and upload:
+回到之前的终端然后上传：
 
 <div class="host-code"></div>
 
@@ -161,17 +162,16 @@ make eagle_default upload
 Note that this will also copy (and overwrite) the two config files [mainapp.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/mainapp.config) and [px4.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/px4.config) to the device. Those files are stored under /usr/share/data/adsp/px4.config and /home/linaro/mainapp.config respectively if you want to edit the startup scripts directly on your vehicle.
 </aside>
 
-The mixer currently needs to be copied manually:
-
+目前mixer需要手动复制：
 <div class="host-code"></div>
 
 ```
 adb push ROMFS/px4fmu_common/mixers/quad_x.main.mix  /usr/share/data/adsp
 ```
 
-#### Run it
+运行：
 
-Run the DSP debug monitor:
+运行DSP监视:
 
 <div class="host-code"></div>
 
