@@ -179,16 +179,14 @@ adb push ROMFS/px4fmu_common/mixers/quad_x.main.mix  /usr/share/data/adsp
 ${HEXAGON_SDK_ROOT}/tools/mini-dm/Linux_Debug/mini-dm
 ```
 
-Go back to ADB shell and run mainapp:
-
+返回到ADB shell然后运行mainapp:
 ```sh
 cd /home/linaro
 ./mainapp mainapp.config
 ```
+注意，mainapp将会停止一但你断开usb连接线（或者你的ssh端断开连接）。为飞行，你可以将mainapp设置为boot启动后自启
 
-Note that the mainapp will stop as soon as you disconnect the USB cable (or if you ssh session is disconnected). To fly, you should make the mainapp auto-start after boot.
-
-#### Auto-start mainapp
+自动运行mainapp
 
 To run the mainapp as soon as the Snapdragon has booted, you can add the startup to `rc.local`:
 
