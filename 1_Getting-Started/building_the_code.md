@@ -159,7 +159,7 @@ make eagle_default upload
 ```
 
 <aside class="note">
-Note that this will also copy (and overwrite) the two config files [mainapp.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/mainapp.config) and [px4.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/px4.config) to the device. Those files are stored under /usr/share/data/adsp/px4.config and /home/linaro/mainapp.config respectively if you want to edit the startup scripts directly on your vehicle.
+注：这样的操作会拷贝或覆盖两个配置文件： [mainapp.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/mainapp.config) and [px4.config](https://github.com/PX4/Firmware/blob/master/posix-configs/eagle/flight/px4.config) to the device. 文件存储目录： /usr/share/data/adsp/px4.config and /home/linaro/mainapp.config 你可以为你的设备（飞行器）修改它们.
 </aside>
 
 目前mixer需要手动复制：
@@ -254,15 +254,15 @@ Then load the CMakeLists.txt in the root firmware folder via File -> Open File o
 
 After loading, the 'play' button can be configured to run the project by selecting 'custom executable' in the run target configuration and entering 'make' as executable and 'upload' as argument.
 
-### Qt Creator on Windows
+在Window下运行Qt Creator
 
 <aside class="todo">
-Windows has not been tested with Qt creator yet.
+还未进行过测试。
 </aside>
 
-### Qt Creator on Mac OS
+在Mac OS运行Qt Creator
 
-Before starting Qt Creator, the [project file](https://cmake.org/Wiki/CMake_Generator_Specific_Information#Code::Blocks_Generator) needs to be created:
+在启动Qt Creator之前, 工程[project file](https://cmake.org/Wiki/CMake_Generator_Specific_Information#Code::Blocks_Generator) 需要先建立起来:
 
 <div class="host-code"></div>
 
@@ -273,6 +273,6 @@ cd build_creator
 cmake .. -G "CodeBlocks - Unix Makefiles"
 ```
 
-That's it! Start Qt Creator, then complete the steps in the video below to set up the project to build.
+正是如此，启动Qt Creator，然后完成视频中的后续步骤设置好需要编译的工程。
 
 {% youtube %}https://www.youtube.com/watch?v=0pa0gS30zNw&rel=0&vq=hd720{% endyoutube %}
