@@ -188,16 +188,14 @@ cd /home/linaro
 
 自动运行mainapp
 
-To run the mainapp as soon as the Snapdragon has booted, you can add the startup to `rc.local`:
-
-Either edit the file `/etc/rc.local` directly on the Snapdragon:
+为使得mainapp能够在Snapdragon boot后能马上运行，你可以在将启动加到‘rc.local’文件中：
 
 ```sh
 adb shell
 vim /etc/rc.local
 ```
 
-Or copy the file to your computer, edit it locally, and copy it back:
+或者将文件拷到你的电脑中，编辑完后再拷回去：
 
 ```sh
 adb pull /etc/rc.local
@@ -205,7 +203,7 @@ gedit rc.local
 adb push rc.local /etc/rc.local
 ```
 
-For the auto-start, add the following line before `exit 0`:
+为了能够自启动，在'exit 0 '列前，加上下列命令：
 
 ```
 (cd /home/linaro && ./mainapp mainapp.config > mainapp.log)
@@ -213,34 +211,35 @@ For the auto-start, add the following line before `exit 0`:
 exit 0
 ```
 
-Make sure that the `rc.local` is executable:
+确信‘rc.local’文件是可执行的：
 
 ```
 adb shell
 chmod +x /etc/rc.local
 ```
 
-Then reboot the Snapdragon:
+重启 Snapdragon:
 
 ```
 adb reboot
 ```
 
-## Compiling in a graphical IDE
+在图形界面的集成开发环境IDE中进行编译
 
-The PX4 system supports Qt Creator, Eclipse and Sublime Text. Qt Creator is the most user-friendly variant and hence the only officially supported IDE. Unless an expert in Eclipse or Sublime, their use is discouraged. Hardcore users can find an [Eclipse project](https://github.com/PX4/Firmware/blob/master/.project) and a [Sublime project](https://github.com/PX4/Firmware/blob/master/Firmware.sublime-project) in the source tree.
+PX4系统支持QT creator, Eclipse以及Sublime Text等集成发环境。QT Creator      是一种用起来比较好的一款，因此也是官方唯一支持的IDE。除非你是Eclipse及Sublime的专家，否则他们用起来一点也不爽。集成开发环境的下载如下：
+ [Eclipse project](https://github.com/PX4/Firmware/blob/master/.project) and a [Sublime project](https://github.com/PX4/Firmware/blob/master/Firmware.sublime-project) in the source tree.
 
 {% youtube %}https://www.youtube.com/watch?v=Bkk8zttWxEI&rel=0&vq=hd720{% endyoutube %}
 
-## Qt Creator Functionality
+Qt Creator功能
 
-Qt creator offers clickable symbols, auto-completion of the complete codebase and building and flashing firmware.
+Qt creator提供可查询的符号，自动完成代码库的更新及完成固件的生成。
 
 ![qtcreator](../pictures/toolchain/qtcreator.png)
 
-### Qt Creator on Linux
+在Linux 上使用 Qt Creator
 
-Before starting Qt Creator, the [project file](https://cmake.org/Wiki/CMake_Generator_Specific_Information#Code::Blocks_Generator) needs to be created:
+在启动 Qt Creator,需要将工程 [project file](https://cmake.org/Wiki/CMake_Generator_Specific_Information#Code::Blocks_Generator) 建立起来:
 
 <div class="host-code"></div>
 
